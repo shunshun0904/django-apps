@@ -1,0 +1,13 @@
+setup.py
+gunosynews/__init__.py
+gunosynews/items.py
+gunosynews/middlewares.py
+gunosynews/pipelines.py
+gunosynews/settings.py
+gunosynews/spiders/__init__.py
+gunosynews/spiders/gunosy.py
+project.egg-info/PKG-INFO
+project.egg-info/SOURCES.txt
+project.egg-info/dependency_links.txt
+project.egg-info/entry_points.txt
+project.egg-info/top_level.txt
