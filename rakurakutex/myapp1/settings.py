@@ -39,6 +39,11 @@ INSTALLED_APPS = [
     'cms',
     'bootstrapform',  # django-bootstrap-form
     'social_django',  # <--
+    'accounts', # 追加
+    'taggit',
+    'bootstrap4',
+
+
 ]
 
 MIDDLEWARE = [
@@ -58,7 +63,7 @@ ROOT_URLCONF = 'myapp1.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -139,6 +144,6 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
 )
 
-LOGIN_URL = '/login/'
-LOGOUT_URL = '/logout'
-LOGIN_REDIRECT_URL = '/cms/'
+LOGIN_URL = 'accounts/login/'
+LOGOUT_URL = 'accounts/logout'
+LOGIN_REDIRECT_URL = '/cms/book/mypage/'

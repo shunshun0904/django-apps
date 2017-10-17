@@ -17,9 +17,13 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from django.contrib.auth import views as auth_views
 import django.contrib.auth.views
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^cms/', include('cms.urls', namespace='cms')),   # ←ここを追加
     #url(r'^$', views.home, name='home'),
+    url(r'accounts/', include('accounts.urls')), # 追加
 ]
+
+urlpatterns += staticfiles_urlpatterns()
